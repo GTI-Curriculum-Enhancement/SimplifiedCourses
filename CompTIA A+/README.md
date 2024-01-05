@@ -1,5 +1,5 @@
-<!-- YAML Data from '.\CompTIA A+\A+ Course.yaml' -->
-<!-- At: 1/5/2024 12:01:30 AM -->
+<!-- YAML Data from './CompTIA A+/A+ Course.yaml' -->
+<!-- At: 01/05/2024 00:29:07 -->
 
 ```yaml
 ###
