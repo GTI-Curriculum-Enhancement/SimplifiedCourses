@@ -1,9 +1,9 @@
 # SimplifiedCourses
 
-- ./CompTIA A+/A+ Course.yaml
+- CompTIA A+
   - [A+ Course](./CompTIA%20A+/README.md)
-- ./CompTIA Linux+/Linux+.yaml
+- CompTIA Linux+
   - [Linux+](./CompTIA%20Linux+/README.md)
-- ./Networking/Cloud.yaml
+- Networking
   - [Cloud](./Networking/README.md)
 
