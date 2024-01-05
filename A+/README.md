@@ -1,3 +1,7 @@
+# YAML Data from '.\A+\A+ Course.yaml'
+# At: 1/4/2024 4:18:24 PM
+
+```yaml
 ###
 # 90% of all "*** Facts" pages are useless or redundant, so they don't need to be reviewed all the time.
 # It is recommended to at least skim them, but they should only really be read if highlighted in this document
@@ -65,3 +69,5 @@
             N/A
 
         2.8 Support Systems:
+
+```

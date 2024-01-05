@@ -1,0 +1,14 @@
+F:\FoxClass\Utilities\Debug\net7.0-windows\YamlExtractor.Net.exe
+F:\FoxClass\Utilities\Debug\net7.0-windows\YamlExtractor.Net.deps.json
+F:\FoxClass\Utilities\Debug\net7.0-windows\YamlExtractor.Net.runtimeconfig.json
+F:\FoxClass\Utilities\Debug\net7.0-windows\YamlExtractor.Net.dll
+F:\FoxClass\Utilities\YamlExtractor.Net\YamlExtractor.Net\obj\Debug\net7.0-windows\YamlExtractor.Net.csproj.AssemblyReference.cache
+F:\FoxClass\Utilities\YamlExtractor.Net\YamlExtractor.Net\obj\Debug\net7.0-windows\YamlExtractor.Net.GeneratedMSBuildEditorConfig.editorconfig
+F:\FoxClass\Utilities\YamlExtractor.Net\YamlExtractor.Net\obj\Debug\net7.0-windows\YamlExtractor.Net.AssemblyInfoInputs.cache
+F:\FoxClass\Utilities\YamlExtractor.Net\YamlExtractor.Net\obj\Debug\net7.0-windows\YamlExtractor.Net.AssemblyInfo.cs
+F:\FoxClass\Utilities\YamlExtractor.Net\YamlExtractor.Net\obj\Debug\net7.0-windows\YamlExtractor.Net.csproj.CoreCompileInputs.cache
+F:\FoxClass\Utilities\YamlExtractor.Net\YamlExtractor.Net\obj\Debug\net7.0-windows\YamlExtractor.Net.csproj.CopyComplete
+F:\FoxClass\Utilities\YamlExtractor.Net\YamlExtractor.Net\obj\Debug\net7.0-windows\YamlExtractor.Net.dll
+F:\FoxClass\Utilities\YamlExtractor.Net\YamlExtractor.Net\obj\Debug\net7.0-windows\refint\YamlExtractor.Net.dll
+F:\FoxClass\Utilities\YamlExtractor.Net\YamlExtractor.Net\obj\Debug\net7.0-windows\YamlExtractor.Net.genruntimeconfig.cache
+F:\FoxClass\Utilities\YamlExtractor.Net\YamlExtractor.Net\obj\Debug\net7.0-windows\ref\YamlExtractor.Net.dll
