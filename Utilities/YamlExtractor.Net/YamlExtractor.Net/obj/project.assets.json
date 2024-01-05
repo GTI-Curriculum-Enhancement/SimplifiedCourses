@@ -1,11 +1,7 @@
 {
   "version": 3,
   "targets": {
-<<<<<<< HEAD
     "net7.0": {
-=======
-    "net7.0-windows7.0": {
->>>>>>> c9f09c618faf3ae8247b9270ab10f0e28687c15a
       "Spectre.Console/0.48.0": {
         "type": "package",
         "dependencies": {
@@ -79,11 +75,7 @@
     }
   },
   "projectFileDependencyGroups": {
-<<<<<<< HEAD
     "net7.0": [
-=======
-    "net7.0-windows7.0": [
->>>>>>> c9f09c618faf3ae8247b9270ab10f0e28687c15a
       "Spectre.Console >= 0.48.0"
     ]
   },
@@ -109,11 +101,7 @@
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
-<<<<<<< HEAD
         "net7.0"
-=======
-        "net7.0-windows"
->>>>>>> c9f09c618faf3ae8247b9270ab10f0e28687c15a
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -123,13 +111,8 @@
         "https://www.myget.org/F/discord-net/api/v3/index.json": {}
       },
       "frameworks": {
-<<<<<<< HEAD
         "net7.0": {
           "targetAlias": "net7.0",
-=======
-        "net7.0-windows7.0": {
-          "targetAlias": "net7.0-windows",
->>>>>>> c9f09c618faf3ae8247b9270ab10f0e28687c15a
           "projectReferences": {}
         }
       },
@@ -137,22 +120,14 @@
         "warnAsError": [
           "NU1605"
         ]
-<<<<<<< HEAD
-      }
-    },
-    "frameworks": {
-      "net7.0": {
-        "targetAlias": "net7.0",
-=======
       },
       "restoreAuditProperties": {
         "enableAudit": "default"
       }
     },
     "frameworks": {
-      "net7.0-windows7.0": {
-        "targetAlias": "net7.0-windows",
->>>>>>> c9f09c618faf3ae8247b9270ab10f0e28687c15a
+      "net7.0": {
+        "targetAlias": "net7.0",
         "dependencies": {
           "Spectre.Console": {
             "target": "Package",
