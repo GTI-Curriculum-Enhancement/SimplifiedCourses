@@ -15,6 +15,7 @@ E:\AppsIWillNeverFinish\YamlExtractor.Net\YamlExtractor.Net\obj\Debug\net7.0\ref
 E:\AppsIWillNeverFinish\YamlExtractor.Net\YamlExtractor.Net\obj\Debug\net7.0\YamlExtractor.Net.pdb
 E:\AppsIWillNeverFinish\YamlExtractor.Net\YamlExtractor.Net\obj\Debug\net7.0\YamlExtractor.Net.genruntimeconfig.cache
 E:\AppsIWillNeverFinish\YamlExtractor.Net\YamlExtractor.Net\obj\Debug\net7.0\ref\YamlExtractor.Net.dll
+<<<<<<< HEAD
 C:\Users\evans\AppData\Local\Packages\CanonicalGroupLimited.UbuntuonWindows_79rhkp1fndgsc\LocalState\rootfs\home\evan\git-repos\SimplifiedCourses\Utilities\Debug\net7.0\YamlExtractor.Net.exe
 C:\Users\evans\AppData\Local\Packages\CanonicalGroupLimited.UbuntuonWindows_79rhkp1fndgsc\LocalState\rootfs\home\evan\git-repos\SimplifiedCourses\Utilities\Debug\net7.0\YamlExtractor.Net.deps.json
 C:\Users\evans\AppData\Local\Packages\CanonicalGroupLimited.UbuntuonWindows_79rhkp1fndgsc\LocalState\rootfs\home\evan\git-repos\SimplifiedCourses\Utilities\Debug\net7.0\YamlExtractor.Net.runtimeconfig.json
@@ -29,3 +30,5 @@ C:\Users\evans\AppData\Local\Packages\CanonicalGroupLimited.UbuntuonWindows_79rh
 C:\Users\evans\AppData\Local\Packages\CanonicalGroupLimited.UbuntuonWindows_79rhkp1fndgsc\LocalState\rootfs\home\evan\git-repos\SimplifiedCourses\Utilities\YamlExtractor.Net\YamlExtractor.Net\obj\Debug\net7.0\refint\YamlExtractor.Net.dll
 C:\Users\evans\AppData\Local\Packages\CanonicalGroupLimited.UbuntuonWindows_79rhkp1fndgsc\LocalState\rootfs\home\evan\git-repos\SimplifiedCourses\Utilities\YamlExtractor.Net\YamlExtractor.Net\obj\Debug\net7.0\YamlExtractor.Net.genruntimeconfig.cache
 C:\Users\evans\AppData\Local\Packages\CanonicalGroupLimited.UbuntuonWindows_79rhkp1fndgsc\LocalState\rootfs\home\evan\git-repos\SimplifiedCourses\Utilities\YamlExtractor.Net\YamlExtractor.Net\obj\Debug\net7.0\ref\YamlExtractor.Net.dll
+=======
+>>>>>>> c9f09c618faf3ae8247b9270ab10f0e28687c15a

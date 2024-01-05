@@ -2,7 +2,11 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
+<<<<<<< HEAD
     <TargetFramework>net7.0</TargetFramework>
+=======
+    <TargetFramework>net7.0-windows</TargetFramework>
+>>>>>>> c9f09c618faf3ae8247b9270ab10f0e28687c15a
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <BaseOutputPath>../../</BaseOutputPath>
