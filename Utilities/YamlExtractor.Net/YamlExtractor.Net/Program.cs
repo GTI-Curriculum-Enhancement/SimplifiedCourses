@@ -25,12 +25,14 @@ internal static class Program
                 return 5;
             }
 
-            (int totalFiles, int extracted) = ExtractYamlFiles(targetDirectory, tokens);
+            var yamlRet = ExtractYamlFiles(targetDirectory, tokens);
 
-            if (totalFiles == 0)
+            if (yamlRet.TotalFiles == 0)
                 AnsiConsole.MarkupLineInterpolated($"\r\n----------------\r\n[yellow]0[/] files to extract.");
             else
-                AnsiConsole.MarkupLineInterpolated($"\r\n----------------\r\n[yellow]{totalFiles}/{extracted}[/] file{Qol.Pluralize(totalFiles, 's')} extracted successfully.");
+                AnsiConsole.MarkupLineInterpolated(
+                    $"\r\n----------------\r\n[yellow]{yamlRet.TotalFiles}/{yamlRet.ExtractedFiles}[/] file{Qol.Pluralize(yamlRet.TotalFiles, 's')} extracted successfully."
+                );
         }
         catch (Exception e)
         {
@@ -45,29 +47,35 @@ internal static class Program
         return 0;
     }
 
-    static (int, int) ExtractYamlFiles(string dir, string tokens)
+    static YamlReturn ExtractYamlFiles(string dir, string tokens)
     {
         var yamlFilesPerDirectory = new Dictionary<string, int>();
+
+        // Keep track of paths to log all effected after
         List<string> paths = new();
 
         int totalFiles = 0;
         int extracted = 0;
 
-        foreach (var filePath in Directory.EnumerateFiles(dir, "*",
+        // Extract text from YAML files and place it in a README.md file in within the same directory
+        foreach (var path in Directory.EnumerateFiles(dir, "*",
             new EnumerationOptions { IgnoreInaccessible = true, RecurseSubdirectories = true }))
         {
-            if (!filePath.EndsWith(".yaml"))
+            // Check if it's a YAML file
+            if (!path.ToLower().EndsWith(".yaml"))
                 continue;
 
-            var directoryKey = Path.GetDirectoryName(filePath)!;
-            var fileName = Path.GetFileName(filePath);
+            var directoryKey = Path.GetDirectoryName(path)!;
+            var fileName = Path.GetFileName(path);
 
+            // Skip format symbols
             if (fileName == "FormatTokens.yaml")
             {
                 Logging.Log("Skipping format tokens YAML file...");
                 continue;
             }
 
+            // Skip files after one has already been processed (Can only have one README per directory
             totalFiles++;
             if (yamlFilesPerDirectory.TryGetValue(directoryKey, out int value))
             {
@@ -81,12 +89,16 @@ internal static class Program
             else
                 yamlFilesPerDirectory[directoryKey] = 1;
 
-            var readmePath = Path.Combine(directoryKey, "README.md");
-            var yamlContent = File.ReadAllText(filePath);
+            var nestedReadme = Path.Combine(directoryKey, "README.md");
+            var yamlContent = File.ReadAllText(path);
+
+#if DEBUG
+            Logging.DebugLogVar(nameof(nestedReadme), nestedReadme);
+#endif
 
             Logging.Log($"Extracting: [cyan]{fileName}[/]...");
-            using var mdWriter = new StreamWriter(readmePath);
-            mdWriter.WriteLine($"<!-- YAML Data from '{filePath}' -->");
+            using var mdWriter = new StreamWriter(nestedReadme);
+            mdWriter.WriteLine($"<!-- YAML Data from '{path}' -->");
             mdWriter.WriteLine($"<!-- At: {DateTime.Now} -->\r\n");
             mdWriter.WriteLine("```yaml");
             mdWriter.WriteLine(tokens);
@@ -95,42 +107,37 @@ internal static class Program
             mdWriter.WriteLine("```");
 
             extracted++;
-            paths.Add(filePath);
+            paths.Add(path);
         }
 
         Logging.Log("Gathering YAML information for root level README...");
 
+        // Make sure all path items are in order for the dictionary
+        paths.Sort();
+
 #if DEBUG
+        Console.WriteLine();
+        Logging.DebugLog("Effected paths:");
         foreach (var path in paths)
             Console.WriteLine(path);
         Console.WriteLine();
 #endif
 
-        var builder = new StringBuilder();
-        foreach (var path in paths)
-        {
-            int indent = 0;
-            foreach (var segment in path.Split('\\'))
-            {
-                if (segment == "." || segment == Path.GetFileName(path))
-                    continue;
-
-                builder.AppendLine($"{new string(' ', indent * 2)}- {segment}");
-                indent++;
-            }
-
-            builder.AppendLine($"{new string(' ', indent * 2)}- [{Path.GetFileNameWithoutExtension(path)}]({Path.GetDirectoryName(path).Replace('\\', '/').Replace(" ", "%20")}/README.md)");
-        }
+        var readmePath = Path.Combine(dir, "README.md");
+        var readmeText = YamlToMarkdown(paths);
 
 #if DEBUG
-        Console.Write(builder.ToString());
+        Logging.DebugLog("README.md dictionary:");
+        Logging.DebugLogNested(string.Join("\r\n", readmeText));
+        Logging.DebugLogVar("At", readmePath);
 #endif
 
-        using var rootRM = new StreamWriter(".\\README.md");
-        rootRM.WriteLine("# SimplifiedCourses\r\n");
-        rootRM.WriteLine(builder.ToString());
+        using var rootRM = new StreamWriter(readmePath);
+        rootRM.WriteLine("# Simplified Courses\r\n");
+        foreach (var item in readmeText)
+            rootRM.WriteLine(item);
 
-        return (totalFiles, extracted);
+        return new(totalFiles, extracted);
     }
 
     static string? GetFormatTokens(string directory, string specificFile)
@@ -141,5 +148,43 @@ internal static class Program
             return File.ReadAllText(specificFilePath);
 
         return null;
+    }
+
+    static List<string> YamlToMarkdown(List<string> paths)
+    {
+        List<string> markdownList = new();
+
+        foreach (var path in paths)
+        {
+            string[] segments = path.Split(Path.DirectorySeparatorChar, Path.AltDirectorySeparatorChar);
+
+            StringBuilder sb = new();
+            for (int i = 0; i < segments.Length - 1; i++)
+            {
+                if (segments[i] == ".")
+                    continue;
+
+                markdownList.Add($"{sb}- {segments[i]}");
+                sb.Append("  ");
+            }
+
+            string fileName = segments[^1];
+            string urlEncodedFileName = path.Replace(fileName, "README.md").Replace(" ", "%20");
+            markdownList.Add($"{sb}- [{Path.GetFileNameWithoutExtension(fileName)}]({urlEncodedFileName})");
+        }
+
+        return markdownList.Distinct().ToList();
+    }
+
+    private struct YamlReturn
+    {
+        public YamlReturn(int total, int extracted)
+        {
+            TotalFiles = total;
+            ExtractedFiles = extracted;
+        }
+
+        public int TotalFiles { get; set; }
+        public int ExtractedFiles { get; set; }
     }
 }

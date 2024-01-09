@@ -44,4 +44,25 @@ internal static class Logging
         LogError(message);
         AnsiConsole.WriteException(e);
     }
+
+    public static void DebugLogVar(string tag, string value)
+    {
+        DebugLog($"{tag}: {value}");
+    }
+
+    public static void DebugLog(string log)
+    {
+#if DEBUG
+        AnsiConsole.MarkupLineInterpolated($"[darkmagenta][[DEBUG]][/]\t{log}");
+#endif
+    }
+
+    public static void DebugLogNested(string log)
+    {
+#if DEBUG
+        AnsiConsole.MarkupLineInterpolated($"[darkmagenta][[START DEBUG]][/]\r\n");
+        AnsiConsole.MarkupLine(log.EscapeMarkup());
+        AnsiConsole.MarkupLineInterpolated($"[darkmagenta][[END DEBUG]][/]");
+#endif
+    }
 }
