@@ -62,7 +62,7 @@ internal static class Program
             new EnumerationOptions { IgnoreInaccessible = true, RecurseSubdirectories = true }))
         {
             // Check if it's a YAML file
-            if (!path.ToLower().EndsWith(".yaml"))
+            if (!path.ToLower().EndsWith(".yaml") || path.Contains("Utilities"))
                 continue;
 
             var directoryKey = Path.GetDirectoryName(path)!;
