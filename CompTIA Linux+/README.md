@@ -1,5 +1,5 @@
-<!-- YAML Data from './CompTIA Linux+/Linux+.yaml' -->
-<!-- At: 01/08/2024 17:05:15 -->
+<!-- YAML Data from '.\CompTIA Linux+\Linux+.yaml' -->
+<!-- At: 1/9/2024 12:49:19 PM -->
 
 ```yaml
 ###
@@ -29,6 +29,40 @@
 #   associated with it, based on YAML specification)
 ###
 
-[Still needs to be setup]
+[TestOut Guides](https://guide.testout.com/)
 
+[TestOut Linux+ Course Overview](https://guide.testout.com/overview/lxv6)
+
+[
+  Start with explaining how BASH parses command input
+
+  For example;
+    uname --help
+
+  This means nothing to a student new to bash.
+  You can tell them this gives info about the command, but then what?
+  Is this special to the command? What signifies the command or how to pull up more help?
+  Etc.
+
+  Teach them how bash parses commands, so 'uname --help' becomes;
+    'uname' [command]
+    '--help' [arg0]
+
+  Expand this to other built-in commands to show that this is a rule of standardization.
+    'ls --help';
+      'ls' [command]
+      '--help' [arg0]
+
+    'ls -la'
+      'ls' [command]
+      '-la' [arg1]
+
+    [The same as]
+      'ls' [command]
+      '-l' [arg0]
+      '-a' [arg1]
+
+
+  Teach them to teach themselves.
+]
 ```

@@ -1,5 +1,5 @@
-<!-- YAML Data from './CompTIA A+/A+.yaml' -->
-<!-- At: 01/08/2024 17:05:15 -->
+<!-- YAML Data from '.\CompTIA A+\A+.yaml' -->
+<!-- At: 1/9/2024 12:49:18 PM -->
 
 ```yaml
 ###
@@ -28,6 +28,8 @@
 #   If the line does not end with a ":", then that is the end of the tree (There will be no further item
 #   associated with it, based on YAML specification)
 ###
+
+[TestOut Guides](https://guide.testout.com/)
 
 1.0 Course Introduction:
     1.1 Course Introduction:

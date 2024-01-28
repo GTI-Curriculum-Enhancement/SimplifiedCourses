@@ -1,4 +1,5 @@
 ﻿using Spectre.Console;
+using System.Runtime.InteropServices;
 using System.Text;
 
 namespace YamlExtractor.Net.Logger;
@@ -26,7 +27,7 @@ internal static class Logging
     public static void WriteTitle(Rule rule)
     {
         AnsiConsole.Write(rule);
-        Console.Write("\r\n");
+        Console.WriteLine();
     }
 
     public static void WriteData(string header, params string[] data)
@@ -34,7 +35,7 @@ internal static class Logging
         StringBuilder text = new($"{header}:\r\n");
 
         foreach (string d in data)
-            text.Append("\t" + d + "\r\n");
+            text.Append($"\t{d}\r\n");
 
         WriteLine(text.ToString());
     }
@@ -45,24 +46,40 @@ internal static class Logging
         AnsiConsole.WriteException(e);
     }
 
+    /* Debugging methods */
+
+    /*
+     * I could just make nest all of these methods within a preprocessor statement, but I don't trust that I'd keep all
+     * references within preprocessor statements as well.
+     */
+
     public static void DebugLogVar(string tag, string value)
     {
+#if DEBUG
         DebugLog($"{tag}: {value}");
+#endif
     }
 
     public static void DebugLog(string log)
     {
 #if DEBUG
-        AnsiConsole.MarkupLineInterpolated($"[darkmagenta][[DEBUG]][/]\t{log}");
+        AnsiConsole.MarkupLineInterpolated($"[darkmagenta]<debug \t\b'[/]{log}[darkmagenta]' />[/]");
 #endif
     }
 
-    public static void DebugLogNested(string log)
+    public static void DebugLogNested(string header, [Optional] string log)
     {
 #if DEBUG
-        AnsiConsole.MarkupLineInterpolated($"[darkmagenta][[START DEBUG]][/]\r\n");
-        AnsiConsole.MarkupLine(log.EscapeMarkup());
-        AnsiConsole.MarkupLineInterpolated($"[darkmagenta][[END DEBUG]][/]");
+        if (string.IsNullOrEmpty(log))
+            (log, header) = (header, "");
+        else
+            header = $" title='[magenta1]{header}[/]'";
+
+        log = $"\r\n{log}";
+
+        AnsiConsole.Markup($"[darkmagenta]<debug{header}>[/]");
+        AnsiConsole.MarkupLine(string.Join("\n\t| ", log.EscapeMarkup().Split('\n')));
+        AnsiConsole.MarkupLine("[darkmagenta]<debug/>[/]");
 #endif
     }
 }

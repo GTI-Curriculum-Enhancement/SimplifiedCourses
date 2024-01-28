@@ -10,7 +10,7 @@ internal static class Qol
     /// <returns></returns>
     public static string Pluralize(int count, string str)
         => count == 1
-            ? ""
+            ? string.Empty
             : str;
 
     /// <inheritdoc/>
