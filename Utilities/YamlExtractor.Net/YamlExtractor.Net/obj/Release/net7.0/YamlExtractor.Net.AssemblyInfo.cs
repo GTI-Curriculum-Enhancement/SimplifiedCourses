@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("YamlExtractor.Net")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8e5b7a2014ac067f6cc21b79682f62ea993ac06f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9694402c18048d0e5e79654210e649c7a393a5ae")]
 [assembly: System.Reflection.AssemblyProductAttribute("YamlExtractor.Net")]
 [assembly: System.Reflection.AssemblyTitleAttribute("YamlExtractor.Net")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

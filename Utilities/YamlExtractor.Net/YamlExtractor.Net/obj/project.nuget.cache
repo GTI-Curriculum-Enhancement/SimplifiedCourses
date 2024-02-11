@@ -1,15 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "1REFMhzq/4hsmYzZRTq99SdqJhupyuTrRtHaOlla6Nj1tJXqL+QOqFyXhPFA2ZsJDlUcwgYztukLi/8BUS5e2A==",
+  "dgSpecHash": "XEM9Nykm4LZE3dp1cSs6Tns4fzKdK5Mzc+ffOLgg5HEKVz6j9FNE1Yriu7+9IqwDMmyQPqbSUXNtTw7FY3U3Kg==",
   "success": true,
   "projectFilePath": "F:\\FoxClass\\Utilities\\YamlExtractor.Net\\YamlExtractor.Net\\YamlExtractor.Net.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\evans\\.nuget\\packages\\spectre.console\\0.48.0\\spectre.console.0.48.0.nupkg.sha512",
-    "C:\\Users\\evans\\.nuget\\packages\\system.memory\\4.5.5\\system.memory.4.5.5.nupkg.sha512",
-    "C:\\Users\\evans\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.14\\microsoft.windowsdesktop.app.ref.7.0.14.nupkg.sha512",
-    "C:\\Users\\evans\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.14\\microsoft.netcore.app.ref.7.0.14.nupkg.sha512",
-    "C:\\Users\\evans\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.14\\microsoft.aspnetcore.app.ref.7.0.14.nupkg.sha512",
-    "C:\\Users\\evans\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\7.0.14\\microsoft.netcore.app.host.win-x64.7.0.14.nupkg.sha512"
+    "C:\\Users\\evans\\.nuget\\packages\\system.memory\\4.5.5\\system.memory.4.5.5.nupkg.sha512"
   ],
   "logs": []
 }

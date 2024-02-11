@@ -1,5 +1,5 @@
 <!-- YAML Data from '.\CompTIA Linux+\Linux+.yaml' -->
-<!-- At: 1/9/2024 12:49:19 PM -->
+<!-- At: 2/11/2024 1:12:47 PM -->
 
 ```yaml
 ###
@@ -31,7 +31,7 @@
 
 [TestOut Guides](https://guide.testout.com/)
 
-[TestOut Linux+ Course Overview](https://guide.testout.com/overview/lxv6)
+MARKDOWN_L) [TestOut Linux+ Course Overview](https://guide.testout.com/overview/lxv6)
 
 [
   Start with explaining how BASH parses command input
@@ -64,5 +64,17 @@
 
 
   Teach them to teach themselves.
+
+  MARKDOWN_L) [Bash order of operations](https://mywiki.wooledge.org/BashParser)
+  MARKDOWN_L) [Process Diagram](https://stuff.lhunath.com/parser.png)
+
+  Bash order of operations;
+    1. Read data to execute [Type in command]
+    2. Process quotes [Evaluate quotation]
+    3. Split the read data into commands [Split by ';' (separate commands on the same line)]
+    4. Parse special operators [Piping, redirection, etc]
+    4. Perform expansions [Variables, wildcards, etc]
+    5. Split the command into a command name and arguments 
+    6. Execute the command
 ]
 ```
