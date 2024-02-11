@@ -7,6 +7,10 @@
 
 currentDir=$(pwd)
 
+cd "./Utilities/YamlExtractor.Net/YamlExtractor.Net"
+dotnet publish -c Release -r win-x64 /p:PublishSingleFile=true /p:PublishReadyToRun=true -o ../../publish
+
+cd "../../.."
 cd "./Utilities/publish" || {
     echo "Failed to cd into YamlExtractor.Net published files"
     cd "$currentDir"

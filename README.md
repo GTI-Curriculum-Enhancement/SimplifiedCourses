@@ -1,8 +1,8 @@
 # Simplified Courses
 
 - CompTIA A+
-  - [A+](.\CompTIA%20A+\README.md)
+  - [A+](./CompTIA%20A+/README.md)
 - CompTIA Linux+
-  - [Linux+](.\CompTIA%20Linux+\README.md)
+  - [Linux+](./CompTIA%20Linux+/README.md)
 - Networking
-  - [Cloud](.\Networking\README.md)
+  - [Cloud](./Networking/README.md)

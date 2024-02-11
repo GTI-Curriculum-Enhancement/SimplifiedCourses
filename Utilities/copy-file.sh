@@ -1,5 +1,8 @@
 #!/bin/bash
 
+echo "This is no longer in use as YamlExtractor.Net is more efficient"
+exit 1
+
 ###
 # Copy the .YAML file content into a code block for README.md
 ###

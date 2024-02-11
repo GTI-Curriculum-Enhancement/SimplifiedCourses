@@ -1,11 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "XEM9Nykm4LZE3dp1cSs6Tns4fzKdK5Mzc+ffOLgg5HEKVz6j9FNE1Yriu7+9IqwDMmyQPqbSUXNtTw7FY3U3Kg==",
+  "dgSpecHash": "BisLAvd82/n5Fr/orC4UPXPgsqosy339X4k+QVgqvSzFVr7lDHIQPKKt4dKQzC5iNiLdSgfGzTbFL91CNKpCMQ==",
   "success": true,
-  "projectFilePath": "F:\\FoxClass\\Utilities\\YamlExtractor.Net\\YamlExtractor.Net\\YamlExtractor.Net.csproj",
+  "projectFilePath": "/mnt/f/FoxClass/Utilities/YamlExtractor.Net/YamlExtractor.Net/YamlExtractor.Net.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\evans\\.nuget\\packages\\spectre.console\\0.48.0\\spectre.console.0.48.0.nupkg.sha512",
-    "C:\\Users\\evans\\.nuget\\packages\\system.memory\\4.5.5\\system.memory.4.5.5.nupkg.sha512"
+    "/root/.nuget/packages/spectre.console/0.48.0/spectre.console.0.48.0.nupkg.sha512",
+    "/root/.nuget/packages/system.memory/4.5.5/system.memory.4.5.5.nupkg.sha512",
+    "/root/.nuget/packages/microsoft.netcore.app.runtime.win-x64/7.0.15/microsoft.netcore.app.runtime.win-x64.7.0.15.nupkg.sha512",
+    "/root/.nuget/packages/microsoft.aspnetcore.app.runtime.win-x64/7.0.15/microsoft.aspnetcore.app.runtime.win-x64.7.0.15.nupkg.sha512",
+    "/root/.nuget/packages/microsoft.netcore.app.crossgen2.linux-x64/7.0.15/microsoft.netcore.app.crossgen2.linux-x64.7.0.15.nupkg.sha512",
+    "/root/.nuget/packages/microsoft.netcore.app.host.win-x64/7.0.15/microsoft.netcore.app.host.win-x64.7.0.15.nupkg.sha512"
   ],
   "logs": []
 }

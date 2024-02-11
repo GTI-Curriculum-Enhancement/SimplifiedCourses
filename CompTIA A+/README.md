@@ -1,5 +1,5 @@
 <!-- YAML Data from '.\CompTIA A+\A+.yaml' -->
-<!-- At: 2/11/2024 1:12:47 PM -->
+<!-- At: 2/11/2024 1:38:24 PM -->
 
 ```yaml
 ###
@@ -29,7 +29,7 @@
 #   associated with it, based on YAML specification)
 ###
 
-[TestOut Guides](https://guide.testout.com/)
+MARKDOWN) [TestOut Guides](https://guide.testout.com/)
 
 1.0 Course Introduction:
     1.1 Course Introduction:

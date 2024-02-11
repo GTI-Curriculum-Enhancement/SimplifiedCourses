@@ -5,8 +5,6 @@ F:\FoxClass\Utilities\Release\net7.0\YamlExtractor.Net.dll
 F:\FoxClass\Utilities\Release\net7.0\YamlExtractor.Net.pdb
 F:\FoxClass\Utilities\YamlExtractor.Net\YamlExtractor.Net\obj\Release\net7.0\YamlExtractor.Net.csproj.AssemblyReference.cache
 F:\FoxClass\Utilities\YamlExtractor.Net\YamlExtractor.Net\obj\Release\net7.0\YamlExtractor.Net.GeneratedMSBuildEditorConfig.editorconfig
-F:\FoxClass\Utilities\YamlExtractor.Net\YamlExtractor.Net\obj\Release\net7.0\YamlExtractor.Net.AssemblyInfoInputs.cache
-F:\FoxClass\Utilities\YamlExtractor.Net\YamlExtractor.Net\obj\Release\net7.0\YamlExtractor.Net.AssemblyInfo.cs
 F:\FoxClass\Utilities\YamlExtractor.Net\YamlExtractor.Net\obj\Release\net7.0\YamlExtractor.Net.csproj.CoreCompileInputs.cache
 F:\FoxClass\Utilities\YamlExtractor.Net\YamlExtractor.Net\obj\Release\net7.0\YamlExtractor.Net.sourcelink.json
 F:\FoxClass\Utilities\YamlExtractor.Net\YamlExtractor.Net\obj\Release\net7.0\YamlExtractor.Net.csproj.CopyComplete

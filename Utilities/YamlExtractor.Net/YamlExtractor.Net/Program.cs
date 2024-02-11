@@ -1,4 +1,5 @@
 using Spectre.Console;
+using System.Reflection;
 using System.Text;
 using YamlExtractor.Net.Logger;
 using YamlExtractor.Net.Misc;
@@ -16,6 +17,8 @@ internal static class Program
 
         try
         {
+            AnsiConsole.MarkupLine($"[yellow]YamlExtractor.Net[/] v{Assembly.GetEntryAssembly().GetName().Version}");
+
             Logging.Log("Looking for YAML tokens file...");
             var tokens = GetFormatTokens(targetDirectory, "FormatTokens.yaml");
 
@@ -25,7 +28,7 @@ internal static class Program
                 return 5;
             }
 
-            var yamlRet = ExtractYamlFiles(targetDirectory, tokens);
+            var yamlRet = ExtractYamlFiles(targetDirectory, tokens); 
 
             if (yamlRet.TotalFiles == 0)
                 AnsiConsole.MarkupLineInterpolated($"\r\n----------------\r\n[yellow]0[/] files to extract.");
