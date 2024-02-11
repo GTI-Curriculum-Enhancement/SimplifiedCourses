@@ -5,4 +5,7 @@
 - CompTIA Linux+
   - [Linux+](./CompTIA%20Linux+/README.md)
 - Networking
-  - [Cloud](./Networking/README.md)
+  - Cloud
+    - [Cloud](./Networking/Cloud/README.md)
+  - Network+
+    - [Network+](./Networking/Network+/README.md)

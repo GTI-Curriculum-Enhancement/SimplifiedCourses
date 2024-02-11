@@ -8,7 +8,7 @@
 currentDir=$(pwd)
 
 cd "./Utilities/YamlExtractor.Net/YamlExtractor.Net"
-dotnet publish -c Release -r win-x64 /p:PublishSingleFile=true /p:PublishReadyToRun=true -o ../../publish
+dotnet publish -c Release -r win-x64 --no-self-contained /p:PublishSingleFile=true /p:PublishReadyToRun=true -o ../../publish
 
 cd "../../.."
 cd "./Utilities/publish" || {
